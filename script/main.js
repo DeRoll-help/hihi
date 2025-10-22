@@ -67,17 +67,23 @@ const animationTimeline = () => {
             opacity: 0,
             y: 10
         },
-    "+=3.5")
-    .to(".two",
+        "+=3.5")
+        .to(".two",
         0.7,
         {
             opacity: 0,
             y: 10
         },
-    "-=1")
+        "-=1")
     .from(".three", 0.7, {
         opacity: 0,
         y: 10
+    })
+    .from(".gif-anim2", 0.5, {
+        x: -200,
+        y: 300,
+        rotation: -180,
+        opacity: 0,
     })
     .to(".three",
         0.7,
@@ -128,6 +134,12 @@ const animationTimeline = () => {
         },
         "+=2"
     )
+    .from(".gif-anim3", 0.5, {
+        x: -400,
+        y: 300,
+        rotation: -180,
+        opacity: 0,
+    })
     .staggerFrom(
         ".idea-6 span",
         0.8, {
@@ -172,8 +184,8 @@ const animationTimeline = () => {
         "-=2"
     )
     .from(".hat", 0.5, {
-        x: -150,
-        y: 350,
+        x: -200,
+        y: 300,
         rotation: -180,
         opacity: 0,
     })
@@ -262,7 +274,13 @@ const animationTimeline = () => {
             rotation: 90,
         },
         "+=1"
-    );
+    )
+    .from(".gif-anim", 0.5, {
+        x: -200,
+        y: 300,
+        rotation: -180,
+        opacity: 0,
+    });
 
     // Restart Animation on click
     const replyBtn = document.getElementById("replay");
@@ -270,4 +288,3 @@ const animationTimeline = () => {
         tl.restart();
     });
 }
-
