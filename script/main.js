@@ -184,7 +184,7 @@ const animationTimeline = () => {
         "-=2"
     )
     .from(".hat", 0.5, {
-        x: -200,
+        x: -150,
         y: 300,
         rotation: -180,
         opacity: 0,
@@ -224,6 +224,7 @@ const animationTimeline = () => {
         },
         "party"
     )
+  
     .staggerTo(
         ".eight svg",
         1.5, {
@@ -280,7 +281,21 @@ const animationTimeline = () => {
         y: 300,
         rotation: -180,
         opacity: 0,
-    });
+    })
+    .from(".boothpic1", 0.5, {
+        duration: 1,
+        opacity: 0,
+        x: -200,   // bigger offset from left
+        rotation: -10,
+        ease: "power4.out"
+    })
+    .from(".boothpic2", 0.5, {
+        duration: 1,
+        opacity: 0,
+        x: 200,   // bigger offset from right
+        rotation: 10,
+        ease: "power4.out"
+    }, "-=0.7");
 
     // Restart Animation on click
     const replyBtn = document.getElementById("replay");
