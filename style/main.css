@@ -94,7 +94,6 @@ body {
   font-size: 15rem;
 }
 
-
 .six {
   position: relative;
   top: 10vh;
@@ -115,6 +114,35 @@ body {
   top: -35%;
   width: 80px;
 }
+
+.photobooth {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.boothpic1,
+.boothpic2 {
+  position: absolute; /* <-- key change */
+  top: 50%;
+  width: 220px;
+  border: 8px solid white;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  background-color: white;
+  transform: translateY(-50%); /* center vertically */
+}
+
+.boothpic1 {
+  left: 5%; /* start on left */
+  transform: translateY(-50%) rotate(-8deg);
+}
+
+.boothpic2 {
+  right: 5%; /* start on right */
+  transform: translateY(-50%) rotate(8deg);
+}
+
 
 .baloons img {
   display: inline-block;
